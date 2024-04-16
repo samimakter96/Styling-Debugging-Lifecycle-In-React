@@ -1,7 +1,7 @@
 import AddUser from './Components/User/AddUser'
-import './App.css'
 import UserList from './Components/User/UserList'
 import { useState } from 'react'
+import './App.css'
 
 function App() {
 
@@ -14,10 +14,10 @@ function App() {
   }
 
   return (
-    <div>
+    <>
       <AddUser onAddUser={addUserHandler} />
       <UserList users={userList} />
-    </div>
+    </>
   );
 }
 
