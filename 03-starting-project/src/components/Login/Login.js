@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useReducer } from 'react';
+import React, { useState, useReducer } from 'react';
 
 import Card from '../UI/Card/Card';
 import classes from './Login.module.css';
@@ -25,27 +25,9 @@ const passwordReducer = (state, action) => {
 };
 
 const Login = (props) => {
-  // const [enteredEmail, setEnteredEmail] = useState('');
-  // const [emailIsValid, setEmailIsValid] = useState();
-  // const [enteredPassword, setEnteredPassword] = useState('');
-  // const [passwordIsValid, setPasswordIsValid] = useState();
+  
   const [formIsValid, setFormIsValid] = useState(false);
 
-  // useEffect(() => {
-  //   const identifier = setTimeout(() => {
-  //     // console.log('checking for validity');
-  //     setFormIsValid(
-  //       enteredEmail.includes('@') &&
-  //         enteredPassword.trim().length > 6 &&
-  //         collegeNameIsValid
-  //     );
-  //   }, 500);
-
-  //   return () => {
-  //     // console.log('Cleanup');
-  //     clearTimeout(identifier);
-  //   };
-  // }, [enteredEmail, enteredPassword]);
 
   const [emailState, dispatchEmail] = useReducer(emailReducer, {
     value: '',
